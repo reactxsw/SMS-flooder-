@@ -1,12 +1,10 @@
-import json
 import time
 import string
 import requests
 import colorama
 import threading
 import os
-import time
-from random import *
+from random import choice , randint
 
 class Secret():
     discordtoken = "ODcwNjA2MjEzMjMzMTI3NDI0.YQPNOg.2Ap0KCQ7Z8AtiQGhm9ShEDuFBD4"
