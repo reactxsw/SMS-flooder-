@@ -26,12 +26,10 @@ class URL():
 
 class StatusCode():
     success_code = [200,203,206,226,201,204,207,202,205,208]
-    def response_status(response, type):
+    def response_status(response, choice):
         if response in StatusCode.success_code:
-            return f"{colorama.Fore.LIGHTGREEN_EX}[{response}] {type} SUCCESSFUL"
-        
-        else:
-            return f"{colorama.Fore.LIGHTRED_EX}[{response}] {type} UNSUCCESSFUL"
+            return f"{colorama.Fore.LIGHTGREEN_EX}[{response}] {choice} SUCCESSFUL"
+        return f"{colorama.Fore.LIGHTRED_EX}[{response}] {choice} UNSUCCESSFUL"
 
 class Random():
 
@@ -278,7 +276,7 @@ class Process():
 
 def main():
     Process.clear()
-    os.system(f"title SMS-FLOODER ^| ALL API : {URL.url_list} ^| BY REACT")
+    os.system(f"title SMS-FLOODER ^| ALL API : {URL.url_list} ^| BY REACT", shell=False)
     print(SpamMenu.logo + "\n" + SpamMenu.menu)
     print(f"                    {colorama.Fore.LIGHTBLACK_EX}PLEASE ENTER YOUR PHONE NUMBER")
     number = str(input(f"                    {colorama.Fore.WHITE}> "))
